@@ -1,0 +1,17 @@
+<!-- gallery/templates/gallery/upload_art.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Art</title>
+</head>
+<body>
+    <h1>Upload New Art</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+    <a href="{% url 'art_list' %}">Back to Art Gallery</a>
+</body>
+</html>

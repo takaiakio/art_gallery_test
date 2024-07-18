@@ -1,0 +1,33 @@
+<!-- gallery/templates/gallery/art_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Art Gallery</title>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            max-width: 20%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Art Gallery</h1>
+    <div class="gallery">
+        {% for art in arts %}
+            <div>
+                <img src="{{ art.image.url }}" alt="{{ art.title }}">
+                <p>{{ art.title }}</p>
+                <a href="{% url 'delete_art' art.pk %}">Delete</a>  <!-- 削除リンクを追加 -->
+            </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'upload_art' %}">Upload New Art</a>
+</body>
+</html>
+
