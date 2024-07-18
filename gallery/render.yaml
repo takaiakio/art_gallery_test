@@ -7,6 +7,6 @@ services:
     startCommand: "gunicorn artgallery.wsgi --log-file -"
     envVars:
       - key: DJANGO_SECRET_KEY
-        value: 1f8d44df0cf4aaa944c1c5c2f490ae1d
+        value: "a7dbea91a14fc3cebfac8963939b7a98"
     plan: free
     autoDeploy: true

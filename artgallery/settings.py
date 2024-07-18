@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-4m(z!-!e9@@!=$r6_!)cm-39v#dzdln2paelm%g7nm37^6jpm2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['art-gallery-test-rok3.onrender.com','127.0.0.1']
+ALLOWED_HOSTS = ['artgallery-mwos.onrender.com','127.0.0.1']
 
 
 # Application definition
