@@ -1,12 +1,12 @@
 # render.yaml
 services:
   - type: web
-    name: art_gallery_test
+    name: artgallery
     env: python
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn artgallery.wsgi --log-file -"
     envVars:
       - key: DJANGO_SECRET_KEY
         value: 1f8d44df0cf4aaa944c1c5c2f490ae1d
-      - key: DJANGO_SETTINGS_MODULE
-        value: "artgallery.settings"
+    plan: free
+    autoDeploy: true
